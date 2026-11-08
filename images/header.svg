@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 260" width="1100" height="260">
+  <defs>
+    <linearGradient id="langit" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1f2d3d"/>
+      <stop offset="1" stop-color="#3d5a80"/>
+    </linearGradient>
+  </defs>
+  <rect width="1100" height="260" fill="url(#langit)"/>
+  <circle cx="930" cy="70" r="38" fill="#f5a623" opacity="0.9"/>
+  <rect x="640" y="120" width="120" height="140" fill="#2b3f55"/>
+  <rect x="780" y="90" width="90" height="170" fill="#33495f"/>
+  <rect x="890" y="140" width="150" height="120" fill="#2b3f55"/>
+  <g stroke="#f5a623" stroke-width="5" fill="none" stroke-linecap="round">
+    <line x1="660" y1="40" x2="660" y2="260"/>
+    <line x1="760" y1="40" x2="760" y2="260"/>
+    <line x1="860" y1="40" x2="860" y2="260"/>
+    <line x1="960" y1="40" x2="960" y2="260"/>
+    <line x1="660" y1="80" x2="960" y2="80"/>
+    <line x1="660" y1="140" x2="960" y2="140"/>
+    <line x1="660" y1="200" x2="960" y2="200"/>
+  </g>
+  <g stroke="#f5a623" stroke-width="3" opacity="0.8">
+    <line x1="660" y1="80" x2="760" y2="140"/>
+    <line x1="760" y1="80" x2="660" y2="140"/>
+    <line x1="760" y1="140" x2="860" y2="200"/>
+    <line x1="860" y1="140" x2="760" y2="200"/>
+    <line x1="860" y1="80" x2="960" y2="140"/>
+    <line x1="960" y1="80" x2="860" y2="140"/>
+  </g>
+  <g fill="#e0e0e0">
+    <rect x="660" y="76" width="300" height="8"/>
+    <rect x="660" y="136" width="300" height="8"/>
+    <rect x="660" y="196" width="300" height="8"/>
+  </g>
+  <text x="40" y="120" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="bold" fill="#ffffff">PT ERICK GARDA PRATAMA</text>
+  <text x="40" y="160" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#f5a623">Sewa dan Jual Scaffolding</text>
+  <rect x="40" y="178" width="260" height="5" fill="#f5a623"/>
+</svg>
