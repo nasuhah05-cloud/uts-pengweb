@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration - PT Erick Garda Pratama</title>
+    <link rel="icon" type="image/svg+xml" href="images/egp.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    
+<div id="wrapper">
+
+    <header>
+        <img src="images/header.svg" alt="Header PT Erick Garda Pratama">
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+            <li class="dropdown">
+                <a href="about.html"><i class="fa-solid fa-circle-info"></i>About &#9662;</a>
+                <ul class="submenu">
+                    <li><a href="about.html#sejarah">Sejarah</a></li>
+                    <li><a href="about.html#visi-misi">Visi &amp; Misi</a></li>
+                    <li><a href="about.html#tujuan">Tujuan</a></li>
+                    <li><a href="about.html#struktur">Struktur Organisasi</a></li>
+                </ul>
+            </li>
+            <li><a href="gallery.html"><i class="fa-solid fa-images"></i>Gallery</a></li>
+            <li><a href="registration.html" class="active"><i class="fa-solid fa-pen-to-square"></i>Registration</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-envelope"></i>Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <main>
+            <h1>Form Pendaftaran Pelanggan</h1>
+            <p>Isi data berikut untuk memesan atau meminta penawaran harga.</p>
+
+            <!-- HTML Forms: onsubmit memanggil fungsi kirimRegistrasi() di script.js -->
+            <form onsubmit="return kirimRegistrasi()">
+
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="contoh@email.com">
+
+                <label for="telepon">No. Telepon / WhatsApp</label>
+                <input type="tel" id="telepon" name="telepon" placeholder="08xxxxxxxxxx">
+
+                <label for="layanan">Jenis Layanan</label>
+                <select id="layanan" name="layanan">
+                    <option value="sewa">Sewa Scaffolding</option>
+                    <option value="beli">Beli Scaffolding</option>
+                    <option value="pasang">Jasa Pemasangan</option>
+                </select>
+
+                <label for="tanggal">Tanggal Mulai Proyek</label>
+                <input type="date" id="tanggal" name="tanggal">
+
+                <label>Jenis Proyek</label>
+                <!-- radio: hanya satu pilihan (name harus sama) -->
+                <input type="radio" id="rumah" name="proyek" value="rumah" checked>
+                <label for="rumah" style="display:inline;">Rumah</label>
+                <input type="radio" id="gedung" name="proyek" value="gedung">
+                <label for="gedung" style="display:inline;">Gedung</label>
+                <input type="radio" id="pabrik" name="proyek" value="pabrik">
+                <label for="pabrik" style="display:inline;">Pabrik</label>
+
+                <label>Kebutuhan Tambahan</label>
+                <!-- checkbox: boleh memilih lebih dari satu -->
+                <input type="checkbox" id="antar" name="tambahan" value="antar">
+                <label for="antar" style="display:inline;">Pengiriman</label>
+                <input type="checkbox" id="pasang" name="tambahan" value="pasang">
+                <label for="pasang" style="display:inline;">Pemasangan</label>
+
+                <label for="catatan">Catatan</label>
+                <textarea id="catatan" name="catatan" rows="4" placeholder="Tulis kebutuhan Anda..."></textarea>
+
+                <button type="submit">Kirim</button>
+                <input type="reset" value="Reset">
+            </form>
+        </main>
+
+        <aside>
+            <div class="widget">
+                <h3><i class="fa-solid fa-clock"></i>Jam</h3>
+                <div id="jam"></div>
+                <p id="tanggal-hari" style="text-align: center; margin-bottom:0;"></p>
+            </div>
+            <div class="widget">
+                <h3><i class="fa-brands fa-youtube"></i>Video</h3>
+                <iframe src="images/scaffolding.mp4" title="Video Scaffolding" width="300" height="300"></iframe>
+            </div>
+            <div class="widget">
+                <h3><i class="fa-solid fa-user-tie"></i>Profil Pemilik</h3>
+                <p><strong>Direktur Utama PT Erick Garda Pratama</strong></p>
+                <p>Berpengalaman lebih dari 5 tahun di bidang konstruksi.</p>
+            </div>
+            <div class="widget">
+                <h3><i class="fa-solid fa-newspaper"></i>Artikel</h3>
+                <ul>
+                    <li><a href="artikel-1.html">Jenis-Jenis Scaffolding</a></li>
+                    <li><a href="artikel-2.html">Tips Keselamatan</a></li>
+                    <li><a href="artikel-3.html">Sewa atau Beli?</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 PT Erick Garda Pratama. Hak cipta dilindungi.</p>
+        <p><strong>HATUR NUHUN SEKABEHAN</strong></p>
+
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
