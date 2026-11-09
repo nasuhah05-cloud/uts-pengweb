@@ -1,0 +1,352 @@
+/* =====================================================
+   STYLE.CSS - PT Erick Garda Pratama
+   ===================================================== */
+
+/* CSS SYNTAX: selector { property: value; } */
+
+/* Selector universal: berlaku ke semua elemen.
+   border-box = padding & border dihitung ke dalam width (Box Model) */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif; /* CSS Fonts */
+    font-size: 16px;
+    line-height: 1.6;                          /* CSS Text: jarak antar baris */
+    color: #333333;                            /* CSS Colors (HEX) */
+    background-color: #eef1f4;                 /* CSS Background */
+}
+
+/* Selector ID (#) */
+#wrapper {
+    width: 1100px;                             /* CSS Width */
+    max-width: 100%;
+    margin: 20px auto;                         /* CSS Margin: kiri-kanan otomatis = tengah */
+    background-color: #ffffff;
+    border: 1px solid #cccccc;                 /* CSS Border */
+}
+
+/* ---------- HEADER ---------- */
+header img {
+    width: 100%;
+    height: 260px;                             /* CSS Height */
+    display: block;
+}
+
+/* ---------- NAVIGASI ---------- */
+nav {
+    background-color: #1f2d3d;
+}
+
+nav ul {
+    list-style-type: none;                     /* CSS List: hilangkan bullet */
+    margin: 0;
+    padding: 0;
+    display: flex;                             /* menu berjajar horizontal */
+}
+
+nav li a {
+    display: block;
+    padding: 14px 24px;                        /* CSS Padding */
+    color: #ffffff;
+    text-decoration: none;                     /* CSS Links */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav li a:hover {                               /* pseudo-class: saat kursor di atas menu */
+    background-color: #f5a623;
+    color: #1f2d3d;
+}
+
+nav li a.active {                              /* class: menu halaman aktif */
+    background-color: #f5a623;
+    color: #1f2d3d;
+}
+
+/* ---------- MENU DROPDOWN ---------- */
+nav li {
+    position: relative;                        /* acuan posisi untuk submenu */
+}
+
+.submenu {
+    display: none;                             /* submenu disembunyikan dulu */
+    position: absolute;                        /* melayang di bawah menu induk */
+    top: 100%;                                 /* tepat di bawah menu induk */
+    left: 0;
+    min-width: 220px;
+    background-color: #1f2d3d;
+    z-index: 10;                               /* supaya tampil di atas konten lain */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown:hover .submenu {                     /* submenu muncul saat kursor di atas .dropdown */
+    display: block;
+}
+
+.submenu li a {
+    text-transform: none;                      /* huruf biasa, bukan kapital */
+    font-weight: normal;
+    border-top: 1px solid #3a4d63;
+}
+
+/* ---------- CONTAINER (main + sidebar) ---------- */
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* ---------- MAIN ---------- */
+main {
+    flex: 3;
+}
+
+main h1,
+main h2 {                                      /* selector grup */
+    color: #1f2d3d;
+    border-bottom: 3px solid #f5a623;
+    padding-bottom: 6px;
+}
+
+main p {
+    text-align: justify;
+}
+
+/* Selector class (.) */
+.artikel {
+    background-color: #f9f9f9;
+    border: 1px solid #dddddd;
+    border-left: 6px solid #f5a623;
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+
+.artikel h2 {
+    margin-top: 0;
+    border-bottom: none;
+}
+
+.artikel h2 a {
+    color: #1f2d3d;
+    text-decoration: none;
+}
+
+.artikel h2 a:hover {
+    color: #f5a623;
+}
+
+.tanggal {
+    color: #777777;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.read-more {
+    display: inline-block;
+    background-color: #f5a623;
+    color: #1f2d3d;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    background-color: #1f2d3d;
+    color: #ffffff;
+}
+
+.pengumuman {
+    background-color: #fff3cd;
+    border: 2px dashed #f5a623;
+    padding: 12px 18px;
+}
+
+blockquote {
+    background-color: #eef1f4;
+    border-left: 5px solid #1f2d3d;
+    margin: 15px 0;
+    padding: 10px 20px;
+    font-style: italic;
+}
+
+.gambar-artikel {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border: 1px solid #cccccc;
+    padding: 4px;
+}
+
+/* ---------- SIDEBAR ---------- */
+aside {
+    flex: 1;
+}
+
+.widget {
+    background-color: #f4f6f8;
+    border: 1px solid #cccccc;
+    padding: 12px;
+    margin-bottom: 20px;
+}
+
+.widget h3 {
+    margin-top: 0;
+    background-color: #1f2d3d;
+    color: #ffffff;
+    padding: 8px 10px;
+    font-size: 16px;
+}
+
+#jam {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    color: #1f2d3d;
+}
+
+.widget iframe {
+    width: 100%;
+    height: 160px;
+    border: none;
+}
+
+/* ---------- CSS TABLES ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;                 /* gabungkan garis border antar sel */
+    margin: 15px 0;
+}
+
+th,
+td {
+    border: 1px solid #cccccc;
+    padding: 8px 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #1f2d3d;
+    color: #ffffff;
+}
+
+tr:nth-child(even) {                           /* baris genap berwarna abu-abu */
+    background-color: #f2f2f2;
+}
+
+tr:hover td {
+    background-color: #ffe9b8;
+}
+
+/* ---------- CSS LIST ---------- */
+main ul {
+    list-style-type: square;
+}
+
+main ol {
+    list-style-type: decimal;
+}
+
+main li,
+.widget li {
+    margin-bottom: 4px;
+}
+
+/* ---------- CSS ICONS (Font Awesome) ---------- */
+.fa-solid,
+.fa-brands {
+    color: #f5a623;
+    margin-right: 6px;
+}
+
+nav .fa-solid {
+    color: inherit;
+}
+
+/* ---------- FORM ---------- */
+form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+input[type="text"],                            /* selector atribut */
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #999999;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+/* CSS Outline: garis di luar border saat kolom diklik */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid #f5a623;
+    outline-offset: 2px;
+}
+
+button,
+input[type="reset"] {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #1f2d3d;
+    color: #ffffff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f5a623;
+    color: #1f2d3d;
+}
+
+/* ---------- GALLERY ---------- */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);     /* 3 kolom sama lebar */
+    gap: 15px;
+}
+
+.gallery figure {
+    margin: 0;
+    border: 1px solid #cccccc;
+    padding: 8px;
+    background-color: #ffffff;
+}
+
+.gallery img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.gallery figcaption {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    background-color: #1f2d3d;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
+footer a {
+    color: #f5a623;
+}
